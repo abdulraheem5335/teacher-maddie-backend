@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Quest - Educational Spelling Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Word Quest</h1>
+            <div id="game-stats">
+                <span>Level: <span id="level">1</span></span>
+                <span>Score: <span id="score">0</span></span>
+                <span>Streak: <span id="streak">0</span></span>
+            </div>
+        </header>
+        
+        <div id="game-screen">
+            <div id="word-display">
+                <div id="image-hint">🍎</div>
+                <div id="word-container">
+                    <div id="word-letters"></div>
+                </div>
+                <div id="definition">A red fruit that grows on trees</div>
+            </div>
+            
+            <div id="letter-bank">
+                <h3>Available Letters:</h3>
+                <div id="letters"></div>
+            </div>
+            
+            <div id="controls">
+                <button id="hint-btn">💡 Hint</button>
+                <button id="clear-btn">🔄 Clear</button>
+                <button id="submit-btn">✓ Submit</button>
+            </div>
+            
+            <div id="progress-container">
+                <div id="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <span id="progress-text">1/10</span>
+            </div>
+        </div>
+        
+        <div id="start-screen">
+            <h2>Welcome to Word Quest!</h2>
+            <p>Learn new words by spelling them correctly!</p>
+            <div id="difficulty-select">
+                <h3>Choose Your Level:</h3>
+                <button class="difficulty-btn" data-difficulty="easy">🌟 Easy (3-4 letters)</button>
+                <button class="difficulty-btn" data-difficulty="medium">⭐ Medium (5-6 letters)</button>
+                <button class="difficulty-btn" data-difficulty="hard">🔥 Hard (7+ letters)</button>
+            </div>
+            <button id="start-btn">Start Quest</button>
+        </div>
+        
+        <div id="game-over-screen" class="hidden">
+            <h2>Quest Complete!</h2>
+            <div id="final-stats">
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p>Words Learned: <span id="words-learned">0</span></p>
+                <p>Best Streak: <span id="best-streak">0</span></p>
+            </div>
+            <button id="restart-btn">New Quest</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

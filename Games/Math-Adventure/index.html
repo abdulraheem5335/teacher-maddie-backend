@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Adventure - Educational Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Math Adventure</h1>
+            <div id="game-stats">
+                <span>Level: <span id="level">1</span></span>
+                <span>Score: <span id="score">0</span></span>
+                <span>Lives: <span id="lives">3</span></span>
+            </div>
+        </header>
+        
+        <div id="game-screen">
+            <div id="question-container">
+                <h2 id="question">What is 2 + 3?</h2>
+                <div id="answers">
+                    <button class="answer-btn" data-answer="4">4</button>
+                    <button class="answer-btn" data-answer="5">5</button>
+                    <button class="answer-btn" data-answer="6">6</button>
+                    <button class="answer-btn" data-answer="7">7</button>
+                </div>
+            </div>
+            
+            <div id="character-container">
+                <div id="player-character">🧙‍♂️</div>
+                <div id="enemy-character">🐲</div>
+            </div>
+            
+            <div id="progress-container">
+                <div id="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <span id="progress-text">1/10</span>
+            </div>
+        </div>
+        
+        <div id="start-screen">
+            <h2>Welcome to Math Adventure!</h2>
+            <p>Help the wizard defeat monsters by solving math problems!</p>
+            <div id="level-select">
+                <h3>Choose Difficulty:</h3>
+                <button class="level-btn" data-level="1">🌟 Easy (Addition)</button>
+                <button class="level-btn" data-level="2">⭐ Medium (Subtraction)</button>
+                <button class="level-btn" data-level="3">🔥 Hard (Multiplication)</button>
+            </div>
+            <button id="start-btn">Start Adventure</button>
+        </div>
+        
+        <div id="game-over-screen" class="hidden">
+            <h2>Adventure Complete!</h2>
+            <div id="final-stats">
+                <p id="final-score">Your Score: 0</p>
+                <p>Great job on your math adventure!</p>
+            </div>
+            <button id="restart-btn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

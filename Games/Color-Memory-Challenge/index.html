@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Memory Challenge - Educational Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Color Memory Challenge</h1>
+            <div id="game-stats">
+                <span>Level: <span id="level">1</span></span>
+                <span>Score: <span id="score">0</span></span>
+                <span>Round: <span id="round">1</span></span>
+            </div>
+        </header>
+        
+        <div id="game-screen">
+            <div id="instruction">
+                <h2 id="instruction-text">Watch the pattern carefully!</h2>
+                <div id="sequence-indicator">
+                    <span id="current-step">0</span> / <span id="total-steps">0</span>
+                </div>
+            </div>
+            
+            <div id="color-grid">
+                <div class="color-button" data-color="red" data-sound="do">🔴</div>
+                <div class="color-button" data-color="blue" data-sound="re">🔵</div>
+                <div class="color-button" data-color="green" data-sound="mi">🟢</div>
+                <div class="color-button" data-color="yellow" data-sound="fa">🟡</div>
+                <div class="color-button" data-color="purple" data-sound="sol">🟣</div>
+                <div class="color-button" data-color="orange" data-sound="la">🟠</div>
+            </div>
+            
+            <div id="game-controls">
+                <button id="start-sequence">▶️ Start</button>
+                <button id="repeat-sequence">🔄 Repeat</button>
+                <button id="hint-btn">💡 Hint</button>
+            </div>
+            
+            <div id="lives-container">
+                <span>Lives: </span>
+                <div id="lives">
+                    <span class="heart">❤️</span>
+                    <span class="heart">❤️</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+            
+            <div id="progress-ring">
+                <svg width="120" height="120">
+                    <circle cx="60" cy="60" r="50" stroke="#ddd" stroke-width="8" fill="none"/>
+                    <circle id="progress-circle" cx="60" cy="60" r="50" stroke="#00b894" stroke-width="8" 
+                            fill="none" stroke-dasharray="314" stroke-dashoffset="314"/>
+                </svg>
+                <div id="progress-text">0%</div>
+            </div>
+        </div>
+        
+        <div id="start-screen">
+            <h2>Welcome to Color Memory Challenge!</h2>
+            <p>Watch the color sequence and repeat it back!</p>
+            <div id="difficulty-selector">
+                <h3>Choose Your Challenge:</h3>
+                <button class="difficulty-btn" data-difficulty="easy">🌟 Easy (3 colors)</button>
+                <button class="difficulty-btn" data-difficulty="medium">⭐ Medium (4 colors)</button>
+                <button class="difficulty-btn" data-difficulty="hard">🔥 Hard (6 colors)</button>
+            </div>
+            <button id="start-game-btn">Start Challenge</button>
+        </div>
+        
+        <div id="game-over-screen" class="hidden">
+            <h2>Challenge Complete!</h2>
+            <div id="final-results">
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p>Highest Level: <span id="highest-level">0</span></p>
+                <p>Perfect Rounds: <span id="perfect-rounds">0</span></p>
+                <div id="achievement-badges"></div>
+            </div>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
